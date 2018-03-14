@@ -75,18 +75,26 @@
      <build>
         <finalName>SampleApp</finalName>
         <plugins>
-          <plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.3</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                    <outputDirectory>target</outputDirectory>
-              		  <warName>ROOT</warName>
-                </configuration>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
       </build>
     </profile>
   </profiles>
+
+    <repositories>
+        <repository>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
+        </pluginRepository>
+    </pluginRepositories>
+
 </project>
